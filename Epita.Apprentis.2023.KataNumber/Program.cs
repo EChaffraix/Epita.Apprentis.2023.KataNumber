@@ -35,6 +35,9 @@ namespace Epita.Apprentis._2023.KataNumber
                 } else if (string.Equals(message, "exit", StringComparison.InvariantCultureIgnoreCase))
                 {
                     @continue = false;
+                } else if (message.Length % 10 == 0) {
+                    var value = converter.FromMorse(message);
+                    adapter.Write($"{value}");
                 }
             } while (@continue);
 

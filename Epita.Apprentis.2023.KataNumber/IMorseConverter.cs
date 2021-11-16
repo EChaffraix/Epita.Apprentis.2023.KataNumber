@@ -3,5 +3,6 @@
     public interface IMorseConverter
     {
         string ToMorse(int number);
+        int FromMorse(string morse);
     }
 }

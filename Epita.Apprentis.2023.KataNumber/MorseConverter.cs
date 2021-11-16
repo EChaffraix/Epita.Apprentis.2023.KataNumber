@@ -21,6 +21,28 @@ namespace Epita.Apprentis._2023.KataNumber
             "_ _ _ _ . "
         };
 
+        static Dictionary<string, int> morseDictionnary = new Dictionary<string, int>();
+
+        static MorseConverter(){
+            int i = 0;
+            foreach(var morse in morseTable){
+                morseDictionnary[morse] = i++;
+            }
+        }
+
+        public int FromMorse(string morse)
+        {
+            int number = 0;
+            int morseSize = morseTable[0].Length;
+
+            for( int i = 0; i < morse.Length; i += morseSize){
+                string singleNumber = morse.Substring(i, morseSize);
+                number = number * 10 + morseDictionnary[singleNumber];
+            }
+
+            return number;
+        }
+
         public string ToMorse(int number)
         {
             StringBuilder builder = new StringBuilder();

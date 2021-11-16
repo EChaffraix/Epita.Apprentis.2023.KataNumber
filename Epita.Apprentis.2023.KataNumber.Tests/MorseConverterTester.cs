@@ -34,10 +34,19 @@ namespace Epita.Apprentis._2023.KataNumber.Tests
          };
 
         [TestCaseSource("testcases")]
-        public void GivenANumber_It_Morse_Representation_Is_Correct(MorseNumber testCase){
+        public void GivenANumber_Its_Morse_Representation_Is_Correct(MorseNumber testCase)
+        {
             var converter = new MorseConverter();
             var result = converter.ToMorse(testCase.Number);
             Assert.That(result, Is.EqualTo(testCase.Morse));
+        }
+
+        [TestCaseSource("testcases")]
+        public void GivenAMorseNumber_Its_Number_Representation_Is_Correct(MorseNumber testCase)
+        {
+            var converter = new MorseConverter();
+            var result = converter.FromMorse(testCase.Morse);
+            Assert.That(result, Is.EqualTo(testCase.Number));
         }
     }
 }
