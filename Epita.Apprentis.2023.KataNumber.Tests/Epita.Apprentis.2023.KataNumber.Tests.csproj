@@ -5,4 +5,14 @@
     <RootNamespace>Epita.Apprentis._2023.KataNumber.Tests</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="NSubstitute" Version="4.2.2" />
+    <PackageReference Include="NUnit" Version="3.13.2" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Epita.Apprentis.2023.KataNumber\Epita.Apprentis.2023.KataNumber.csproj" />
+  </ItemGroup>
+
 </Project>
