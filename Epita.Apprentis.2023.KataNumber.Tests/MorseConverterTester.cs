@@ -7,7 +7,7 @@ namespace Epita.Apprentis._2023.KataNumber.Tests
     {
         public class MorseNumber
         {
-            public int Number { get; set; }
+            public string Number { get; set; }
             public string Morse { get; set; }
 
             public override string ToString()
@@ -16,21 +16,23 @@ namespace Epita.Apprentis._2023.KataNumber.Tests
             }
         }
         static MorseNumber[] testcases = {
-            new MorseNumber { Number= 1903, Morse= ". _ _ _ _ _ _ _ _ . _ _ _ _ _ . . . _ _ " },
-            new MorseNumber { Number= 83, Morse= "_ _ _ . . . . . _ _ " },
-            new MorseNumber { Number= 10, Morse= ". _ _ _ _ _ _ _ _ _ " },
-            new MorseNumber { Number= 42, Morse= ". . . . _ . . _ _ _ " },
-            new MorseNumber { Number= 999, Morse= "_ _ _ _ . _ _ _ _ . _ _ _ _ . " },
-            new MorseNumber { Number= 1, Morse= ". _ _ _ _ " },
-            new MorseNumber { Number= 2, Morse= ". . _ _ _ " },
-            new MorseNumber { Number= 3, Morse= ". . . _ _ " },
-            new MorseNumber { Number= 4, Morse= ". . . . _ " },
-            new MorseNumber { Number= 5, Morse= ". . . . . " },
-            new MorseNumber { Number= 6, Morse= "_ . . . . " },
-            new MorseNumber { Number= 7, Morse= "_ _ . . . " },
-            new MorseNumber { Number= 8, Morse= "_ _ _ . . " },
-            new MorseNumber { Number= 9, Morse= "_ _ _ _ . " },
-            new MorseNumber { Number= 0, Morse= "_ _ _ _ _ " }
+            new MorseNumber { Number= "1903", Morse= ". _ _ _ _ _ _ _ _ . _ _ _ _ _ . . . _ _ " },
+            new MorseNumber { Number= "83", Morse= "_ _ _ . . . . . _ _ " },
+            new MorseNumber { Number= "10", Morse= ". _ _ _ _ _ _ _ _ _ " },
+            new MorseNumber { Number= "42", Morse= ". . . . _ . . _ _ _ " },
+            new MorseNumber { Number= "999", Morse= "_ _ _ _ . _ _ _ _ . _ _ _ _ . " },
+            new MorseNumber { Number= "1", Morse= ". _ _ _ _ " },
+            new MorseNumber { Number= "2", Morse= ". . _ _ _ " },
+            new MorseNumber { Number= "3", Morse= ". . . _ _ " },
+            new MorseNumber { Number= "4", Morse= ". . . . _ " },
+            new MorseNumber { Number= "5", Morse= ". . . . . " },
+            new MorseNumber { Number= "6", Morse= "_ . . . . " },
+            new MorseNumber { Number= "7", Morse= "_ _ . . . " },
+            new MorseNumber { Number= "8", Morse= "_ _ _ . . " },
+            new MorseNumber { Number= "9", Morse= "_ _ _ _ . " },
+            new MorseNumber { Number= "0", Morse= "_ _ _ _ _ " },
+            new MorseNumber { Number = "3216546213216854132169854132198413", Morse= ". . . _ _ . . _ _ _ . _ _ _ _ _ . . . . . . . . . . . . . _ _ . . . . . . _ _ _ . _ _ _ _ . . . _ _ . . _ _ _ . _ _ _ _ _ . . . . _ _ _ . . . . . . . . . . . _ . _ _ _ _ . . . _ _ . . _ _ _ . _ _ _ _ _ . . . . _ _ _ _ . _ _ _ . . . . . . . . . . . _ . _ _ _ _ . . . _ _ . . _ _ _ . _ _ _ _ _ _ _ _ . _ _ _ . . . . . . _ . _ _ _ _ . . . _ _"
+"}
          };
 
         [TestCaseSource("testcases")]

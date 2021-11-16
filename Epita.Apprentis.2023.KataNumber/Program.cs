@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Epita.Apprentis._2023.KataNumber
 {
@@ -28,9 +30,9 @@ namespace Epita.Apprentis._2023.KataNumber
             do
             {
                 message = adapter.Read();
-                if (int.TryParse(message, out var number))
+                if (Regex.IsMatch(message, "[0-9]+"))
                 {
-                    var result = converter.ToMorse(number);
+                    var result = converter.ToMorse(message);
                     adapter.Write(result);
                 } else if (string.Equals(message, "exit", StringComparison.InvariantCultureIgnoreCase))
                 {

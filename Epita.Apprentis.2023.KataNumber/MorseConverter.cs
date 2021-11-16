@@ -21,35 +21,39 @@ namespace Epita.Apprentis._2023.KataNumber
             "_ _ _ _ . "
         };
 
+        static int morseSize = morseTable[0].Length;
         static Dictionary<string, int> morseDictionnary = new Dictionary<string, int>();
 
-        static MorseConverter(){
+        static MorseConverter()
+        {
             int i = 0;
-            foreach(var morse in morseTable){
+            foreach (var morse in morseTable)
+            {
                 morseDictionnary[morse] = i++;
             }
         }
 
-        public int FromMorse(string morse)
+        public string FromMorse(string morse)
         {
-            int number = 0;
-            int morseSize = morseTable[0].Length;
+            StringBuilder number = new StringBuilder();
 
-            for( int i = 0; i < morse.Length; i += morseSize){
+            for (int i = 0; i < morse.Length; i += morseSize)
+            {
                 string singleNumber = morse.Substring(i, morseSize);
-                number = number * 10 + morseDictionnary[singleNumber];
+                number.Append(morseDictionnary[singleNumber]);
             }
 
-            return number;
+            return number.ToString();
         }
 
-        public string ToMorse(int number)
+        public string ToMorse(string number)
         {
             StringBuilder builder = new StringBuilder();
-            while (number > 0)
+            int i = 0;
+            while (i < number.Length)
             {
-                builder.Insert(0, morseTable[number % 10]);
-                number /= 10;
+                int digit = number[i++] - '0';
+                builder.Append(morseTable[digit]);
             }
 
             return builder.Length > 0 ? builder.ToString() : morseTable[0];

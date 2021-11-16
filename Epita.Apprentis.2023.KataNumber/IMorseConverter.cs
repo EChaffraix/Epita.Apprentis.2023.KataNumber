@@ -2,7 +2,7 @@
 {
     public interface IMorseConverter
     {
-        string ToMorse(int number);
-        int FromMorse(string morse);
+        string ToMorse(string number);
+        string FromMorse(string morse);
     }
 }

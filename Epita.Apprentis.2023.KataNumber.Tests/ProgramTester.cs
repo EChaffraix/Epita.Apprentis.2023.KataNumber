@@ -18,13 +18,13 @@ namespace Epita.Apprentis._2023.KataNumber.Tests
             adapter.Read().Returns("42", "exit");
 
             IMorseConverter converter = Substitute.For<IMorseConverter>();
-            converter.ToMorse(Arg.Any<int>()).Returns("Foo");
+            converter.ToMorse(Arg.Any<string>()).Returns("Foo");
 
             var program = new Program(adapter, converter);
 
             program.Run();
 
-            converter.Received(1).ToMorse(42);
+            converter.Received(1).ToMorse("42");
             adapter.Received(1).Write("Foo");
         }
 
@@ -36,7 +36,7 @@ namespace Epita.Apprentis._2023.KataNumber.Tests
             adapter.Read().Returns(input, "exit");
 
             IMorseConverter converter = Substitute.For<IMorseConverter>();
-            converter.FromMorse(Arg.Any<string>()).Returns(42);
+            converter.FromMorse(Arg.Any<string>()).Returns("42");
 
             var program = new Program(adapter, converter);
 
