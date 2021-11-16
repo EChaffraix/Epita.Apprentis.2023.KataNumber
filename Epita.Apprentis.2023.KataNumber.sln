@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epita.Apprentis.2023.KataNumber", "Epita.Apprentis.2023.KataNumber\Epita.Apprentis.2023.KataNumber.csproj", "{68645E97-8C32-48FB-99FA-DEA67E945D93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epita.Apprentis.2023.KataNumber.Tests", "Epita.Apprentis.2023.KataNumber.Tests\Epita.Apprentis.2023.KataNumber.Tests.csproj", "{C2B9B3BE-A00A-402E-8453-1D16B7BD0652}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68645E97-8C32-48FB-99FA-DEA67E945D93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68645E97-8C32-48FB-99FA-DEA67E945D93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68645E97-8C32-48FB-99FA-DEA67E945D93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68645E97-8C32-48FB-99FA-DEA67E945D93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2B9B3BE-A00A-402E-8453-1D16B7BD0652}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2B9B3BE-A00A-402E-8453-1D16B7BD0652}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2B9B3BE-A00A-402E-8453-1D16B7BD0652}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2B9B3BE-A00A-402E-8453-1D16B7BD0652}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5712B382-F29B-4EFF-82A8-F7C7D6B4ED7F}
+	EndGlobalSection
+EndGlobal
